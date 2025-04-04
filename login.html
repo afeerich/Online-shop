@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Sambath Bang - Login</title>
+</head>
+<body style="margin:0; font-family:sans-serif; background:#e9f0f5;">
+
+  <div style="max-width:400px; margin:100px auto; padding:30px; background:white; border-radius:10px; box-shadow:0 0 20px rgba(0,0,0,0.1); text-align:center;">
+    <img src="https://via.placeholder.com/150x50?text=Sambath+Bang" alt="Sambath Bang" style="margin-bottom:20px;">
+    <h2 style="margin-bottom:20px;">Login to Sambath Bang</h2>
+
+    <input type="text" placeholder="Account Number" id="acc" style="width:100%; padding:10px; margin:10px 0; border:1px solid #ccc; border-radius:5px;">
+    <input type="password" placeholder="Password" id="pass" style="width:100%; padding:10px; margin:10px 0; border:1px solid #ccc; border-radius:5px;">
+
+    <button onclick="login()" style="width:100%; padding:10px; background:#007bff; color:white; border:none; border-radius:5px; cursor:pointer;">
+      Login
+    </button>
+
+    <p id="msg" style="color:red; margin-top:15px;"></p>
+  </div>
+
+  <script>
+    function login() {
+      var acc = document.getElementById("acc").value;
+      var pass = document.getElementById("pass").value;
+      if (acc && pass) {
+        window.location.href = "dashboard.html";
+      } else {
+        document.getElementById("msg").innerText = "Enter both account and password.";
+      }
+    }
+  </script>
+</body>
+</html>
